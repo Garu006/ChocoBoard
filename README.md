@@ -1,6 +1,7 @@
 🍫 ChocoBoard
 
 ChocoBoard es un teclado personalizado para Android diseñado con un enfoque en la estética minimalista y una experiencia de usuario fluida. A diferencia de los teclados estándar, ChocoBoard busca una identidad visual única inspirada en tonos tierra y un diseño de "cristal" redondeado.
+
 🚀 Características actuales
 
     Motor IME funcional: Implementación completa de InputMethodService.
