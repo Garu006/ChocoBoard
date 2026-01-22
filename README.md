@@ -26,6 +26,7 @@ ChocoBoard es un teclado personalizado para Android diseñado con un enfoque en 
 📸 Screenshots
 
  ![ChocoBoard Preview](enlace-a-tu-imagen.png)
+ 
 ⚙️ Instalación
 
     Clona este repositorio.
