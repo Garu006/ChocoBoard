@@ -6,6 +6,6 @@
     android:layout_alignParentBottom="true"
     android:keyBackground="@drawable/key_background"
     android:keyTextColor="#000000"
-    android:background="#D1D5DB"
+    android:background="@color/choco_dark"
     android:paddingTop="8dp"
     android:paddingBottom="8dp" />

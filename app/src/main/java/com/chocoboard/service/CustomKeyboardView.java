@@ -27,7 +27,7 @@ public class CustomKeyboardView extends KeyboardView{
         paint.setAntiAlias(true);
         paint.setTypeface(typeface);
         paint.setTextSize(55); // este numero se puede ajustar si las letras se quieren mas grandes o pequeñas
-        paint.setColor(0xFF000000); // color negro
+        paint.setColor(getContext().getColor(R.color.choco_text));
 
         // dibujar el fondo del teclado original
         super.onDraw(canvas);
