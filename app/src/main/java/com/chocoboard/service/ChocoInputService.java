@@ -34,6 +34,9 @@ public class ChocoInputService extends InputMethodService
     public void onKey(int primaryCode, int[] keyCodes) {
         keyboardView.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP);
         InputConnection ic = getCurrentInputConnection();
+        if (primaryCode == -2) {
+            return;
+        }
         if (ic != null) {
             switch (primaryCode) {
                 case Keyboard.KEYCODE_DELETE:

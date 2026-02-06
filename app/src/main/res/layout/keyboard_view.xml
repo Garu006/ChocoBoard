@@ -8,4 +8,6 @@
     android:keyTextColor="#000000"
     android:background="@color/choco_dark"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp" />
+    android:paddingBottom="8dp"
+    android:labelTextSize="0sp"
+    android:keyPreviewLayout="@null"/>

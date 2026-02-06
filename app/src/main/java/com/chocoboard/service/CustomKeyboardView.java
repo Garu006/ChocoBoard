@@ -11,32 +11,36 @@ import androidx.core.content.res.ResourcesCompat;
 import com.chocoboard.R;
 import java.util.List;
 
-public class CustomKeyboardView extends KeyboardView{
+public class CustomKeyboardView extends KeyboardView {
+
     public CustomKeyboardView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
     @Override
     public void onDraw(Canvas canvas) {
-        //Obtenemos la fuente personalizada "Chewy"
-        Typeface typeface = ResourcesCompat.getFont(getContext(), R.font.chewy);
+        // Primero dibujamos el fondo estándar del teclado
+        super.onDraw(canvas);
 
-        // se configura el pincel para dibujar las letras
+        // Cargamos la fuente con cuidado
+        Typeface fuenteChoco = ResourcesCompat.getFont(getContext(), R.font.chewy);
+
         Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
         paint.setAntiAlias(true);
-        paint.setTypeface(typeface);
-        paint.setTextSize(55); // este numero se puede ajustar si las letras se quieren mas grandes o pequeñas
+        paint.setTypeface(fuenteChoco); // Usamos el nombre correcto
         paint.setColor(getContext().getColor(R.color.choco_text));
+        paint.setTextSize(38f);
 
-        // dibujar el fondo del teclado original
-        super.onDraw(canvas);
-
-        // Dibuja las etiquetas de las teclas con la nueva fuente
-        List<Keyboard.Key> keys = getKeyboard().getKeys();
-        for (Keyboard.Key key : keys) {
-            if (key.label != null) {
-                canvas.drawText(key.label.toString(), key.x + (key.width/2), key.y + (key.height/2) + 18, paint);
+        // Dibujamos nuestras letras personalizadas
+        if (getKeyboard() != null) {
+            List<Keyboard.Key> keys = getKeyboard().getKeys();
+            for (Keyboard.Key key : keys) {
+                if (key.label != null) {
+                    float centerX = key.x + (key.width / 2f);
+                    float centerY = key.y + (key.height / 2f) + (paint.getTextSize() / 3f);
+                    canvas.drawText(key.label.toString(), centerX, centerY, paint);
+                }
             }
         }
     }
