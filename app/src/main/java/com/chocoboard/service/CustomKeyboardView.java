@@ -3,6 +3,7 @@ package com.chocoboard.service;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
@@ -20,10 +21,13 @@ public class CustomKeyboardView extends KeyboardView {
     @Override
     public void onDraw(Canvas canvas) {
         // Primero dibujamos el fondo estándar del teclado
-        super.onDraw(canvas);
+//        super.onDraw(canvas);
 
         // Cargamos la fuente con cuidado
         Typeface fuenteChoco = ResourcesCompat.getFont(getContext(), R.font.chewy);
+
+        // Establece el color del fondo del teclado, el primer argumento es la opacidad y el color, el segundo es el modo
+        canvas.drawColor(0x44000000, PorterDuff.Mode.SRC);
 
         Paint paint = new Paint();
         paint.setTextAlign(Paint.Align.CENTER);
