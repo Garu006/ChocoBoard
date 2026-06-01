@@ -1,13 +1,20 @@
-<com.chocoboard.service.CustomKeyboardView
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/keyboard_background"> <com.chocoboard.service.CustomKeyboardView
     android:id="@+id/keyboard_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
     android:keyBackground="@drawable/key_background"
-    android:keyTextColor="#000000"
-    android:background="@color/choco_dark"
+    android:keyTextColor="@color/text_primary" android:background="@color/keyboard_background"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp"
+    android:paddingBottom="4dp"
     android:labelTextSize="0sp"
     android:keyPreviewLayout="@null"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" /> </LinearLayout>

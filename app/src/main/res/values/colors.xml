@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <color name="black">#FF000000</color>
-        <color name="white">#FFFFFFFF</color>
-        <color name="choco_dark">#2D1B13</color>
-        <color name="choco_milk">#79554B</color>
-        <color name="choco_vanilla">#FFF8E1</color>
-        <color name="choco_text">#1A0F0A</color>
+        <color name="keyboard_background">#F5F5F7</color>
+        <color name="key_keyboard_background">#FFFFFF</color>
+        <color name="key_keyboard_special">#E5E5EA</color>
+        <color name="text_primary">#1C1C1E</color>
 </resources>
