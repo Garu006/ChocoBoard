@@ -1,4 +1,4 @@
-package com.chocoboard
+ package com.chocoboard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
